@@ -1,8 +1,8 @@
 module "anchore_test_cluster" {
     source = "terraform-aws-modules/eks/aws"
     cluster_name = "anchore_test_cluster"
-    subnets = ["${var.subnets}"]
-    vpc_id = "${var.vpc}"
+    subnets = ["${var.subnet_ids}"]
+    vpc_id = "${var.vpc_id}"
 
     worker_groups = [
         {
